@@ -1,5 +1,8 @@
 package com.example.pertemuan5
 
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.RadioButton
+
 @Composable
 fun FormDataDiri(modifier: Modifier){
     //variabel-variabel untuk mengingat nilai masukan dari keyboard
@@ -30,8 +33,20 @@ fun FormDataDiri(modifier: Modifier){
                 Row(modifier = Modifier.selectable(
                     selected = textJk == item,
                     onClick = { textJk = item }
-                )) {
+                ), vertikalAligment = Aligment.CenterVertically) {
+                    RadioButton(
+                        selected = textJK == item,
+                        OnClik = {
+                            textJK = item
+                        } )
+                    Text(item)
+
+                }
 
     }
 }
+
+        OutlinedTextField(
+            value = textAlamat
+        )
 
