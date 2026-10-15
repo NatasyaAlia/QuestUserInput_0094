@@ -20,8 +20,11 @@ fun FormDataDiri(modifier: Modifier){
             value = textNama,
             singleLine = true,
             shape = MaterialTheme.shapes.large,
-            onValueChange = { /* TODO */ } // Menambahkan penutup agar struktur valid
+            onValueChange = {
+                textNama = it
+            }
         )
+
     }
 }
 
